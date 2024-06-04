@@ -1,0 +1,10 @@
+.open llmdb
+.databases
+.mode csv
+
+# To import data from csv
+.import C:\Users\Yash Thakar\PROGRAMMING\text2SQL\data\Large language models (2024).csv llmdata
+select * from llmdata limit 10;
+
+# To remove the header row
+Delete from llmdata where Model = (Select Model FROM llmdata LIMIT 1);
